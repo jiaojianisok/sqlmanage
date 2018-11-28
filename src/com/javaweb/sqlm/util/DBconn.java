@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class DBconn {
 
-    static String url = "jdbc:mysql://localhost:3306/sqlm"; // 数据库连接url
+    static String url = "jdbc:mysql://localhost:3306/sqlm?useunicuee=true& characterEncoding=utf8"; // 数据库连接url
     static String username = "root";
     static String password = "Chinano.1";
     static Connection conn = null; // 初始化一个数据连接 conn
