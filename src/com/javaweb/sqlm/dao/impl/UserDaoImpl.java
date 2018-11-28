@@ -2,7 +2,7 @@ package com.javaweb.sqlm.dao.impl;
 
 import com.javaweb.sqlm.dao.UserDao;
 import com.javaweb.sqlm.entity.User;
-import com.javaweb.sqlm.dao.DBconn;
+import com.javaweb.sqlm.util.DBconn;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

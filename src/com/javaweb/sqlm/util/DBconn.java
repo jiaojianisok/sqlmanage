@@ -1,15 +1,15 @@
-package com.javaweb.sqlm.dao;
+package com.javaweb.sqlm.util;
 
 import java.sql.*;
 
 public class DBconn {
 
-    static String url = "jdbc:mysql://localhost:3306/sqlm  characterEncoding=utf8 "; // 数据库连接url
-    static String username = "jj";
+    static String url = "jdbc:mysql://localhost:3306/sqlm"; // 数据库连接url
+    static String username = "root";
     static String password = "Chinano.1";
     static Connection conn = null; // 初始化一个数据连接 conn
     static ResultSet rs = null; // 初始化一个结果集 rs
-    static PreparedStatement ps =null; // 初始化一个PreparedStatement对象 ps
+    static PreparedStatement ps = null; // 初始化一个PreparedStatement对象 ps
 
     public static void init(){
         try {
