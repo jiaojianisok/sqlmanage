@@ -14,4 +14,50 @@
         <url-pattern>/*</url-pattern><!-- /* 即为过滤所有 -->
     </filter-mapping>
 
+    <servlet><!--servlet类路径配置-->
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>com.javaweb.sqlm.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.javaweb.sqlm.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FindUserListServlet</servlet-name>
+        <servlet-class>com.javaweb.sqlm.servlet.FindUserListServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <servlet-class>com.javaweb.sqlm.servlet.DeleteUserServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <servlet-class>com.javaweb.sqlm.servlet.UpdateUserServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping><!--servlet类映射配置-->
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/Register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindUserListServlet</servlet-name>
+        <url-pattern>/FindUserList</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <url-pattern>/DeleteUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateUserServlet</servlet-name>
+        <url-pattern>/UpdateUser</url-pattern>
+    </servlet-mapping>
+
+
+
+
+
 </web-app>
