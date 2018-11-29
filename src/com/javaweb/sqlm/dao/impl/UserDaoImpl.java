@@ -17,7 +17,7 @@ public class UserDaoImpl implements UserDao {
         boolean flag = false;
         try {
             DBconn.init();
-            ResultSet rs = DBconn.selectSql("select * from user where name='"+name+"' and pwd='"+pwd+"'");
+            ResultSet rs = DBconn.selectSql("select * from user where name= '"+name+"' and pwd= '"+pwd+"'");
             while(rs.next()){
                 if(rs.getString("name").equals(name) && rs.getString("pwd").equals(pwd)){
                     flag = true;

@@ -2,6 +2,7 @@ package com.javaweb.sqlm.util;
 
 import java.sql.*;
 
+
 public class DBconn {
 
     static String url = "jdbc:mysql://localhost:3306/sqlm?useunicuee=true& characterEncoding=utf8"; // 数据库连接url
@@ -9,7 +10,7 @@ public class DBconn {
     static String password = "Chinano.1";
     static Connection conn = null; // 初始化一个数据连接 conn
     static ResultSet rs = null; // 初始化一个结果集 rs
-    static PreparedStatement ps = null; // 初始化一个PreparedStatement对象 ps
+    static PreparedStatement ps =null; // 初始化一个PreparedStatement对象 ps
 
     public static void init(){
         try {
@@ -21,11 +22,11 @@ public class DBconn {
         }
     }
 
-
     public static int addUpdDel(String sql){
         int i = 0;
         try{
             PreparedStatement ps = conn.prepareStatement(sql);
+            i =  ps.executeUpdate();
         }catch (SQLException e){
             System.out.println("sql数据库增删改异常");
             e.printStackTrace();
