@@ -3,19 +3,24 @@ package com.javaweb.sqlm.util;
 import java.sql.*;
 
 
+
 public class DBconn {
 
-    static String url = "jdbc:mysql://localhost:3306/sqlm?useunicuee=true& characterEncoding=utf8"; // 数据库连接url
+
+    static String url = "jdbc:mysql://127.0.0.1:3306/sqlm?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC"; // 数据库连接url
     static String username = "root";
     static String password = "Chinano.1";
     static Connection conn = null; // 初始化一个数据连接 conn
+    // static Connection conn = DriverManager.CreateConnection();
     static ResultSet rs = null; // 初始化一个结果集 rs
     static PreparedStatement ps =null; // 初始化一个PreparedStatement对象 ps
 
     public static void init(){
         try {
+            //Class.forName("com.mysql.cj.jdbc.Driver");
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(url,username,password);
+            System.out.println(conn);
         }catch(Exception e){
             System.out.println("init [SQL程序初始化失败]");
             e.printStackTrace();

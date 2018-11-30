@@ -7,6 +7,12 @@
         <element id="directory" name="classes">
           <element id="module-output" name="sqlmanage" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/web/lib/jstl.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/lib/standard.jar" />
+          <element id="file-copy" path="C:/Program Files/tomcat/lib/mysql-connector-java-8.0.13/mysql-connector-java-8.0.13.jar" />
+          <element id="library" level="project" name="mysql-connector-java-8.0.13" />
+        </element>
       </element>
     </root>
   </artifact>
